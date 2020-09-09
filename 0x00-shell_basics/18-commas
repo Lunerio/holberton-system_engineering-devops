@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -amXF1
+ls -amp

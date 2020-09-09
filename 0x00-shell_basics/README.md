@@ -12,3 +12,5 @@
 11-lists Lists all files with long format from the working directory, the the parent directory and the boot directory.
 12-file_type Prints what type of file is iamafile.
 13-symbolic_link Creates a symbolic link to /bin/ls called __ls__
+14-copy_html Copies all the html files in the working directory into the parent directory, unless there's a new version.
+15-lets_move Moves all files beginning with an uppercase letter to the directory /tmp/u.

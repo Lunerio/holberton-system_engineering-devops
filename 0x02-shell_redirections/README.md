@@ -9,7 +9,7 @@
 8 writes the result of ls -la into ls_cwd_content
 9 duplicates the las line of the file iacta
 10 deletes the regular files but not the directories that end with .js in the working dir and subdirectories
-
+11 counts the number of directories and sub-directories in the current directory
 12 displays 10 latest files in a column
 13 prints words that appear once and sorts them
 14 displays lines containing the pattern root from the file /etc/passwd
@@ -20,4 +20,4 @@
 19 replaces all characters A and c from input to Z and e respectively
 20 removes all letters c and C from input
 21 reverse the input
-
+22 displays all users and their home directories, sorted by users, from the /etc/passwd file

@@ -1,2 +1,2 @@
 #!/bin/bash
-cut
+echo $PATH | cut -d: | 

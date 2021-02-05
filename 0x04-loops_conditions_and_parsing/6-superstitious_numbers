@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # this script prints numbers from 1 to 20.
 #+ in case of 4, 9 and 17 prints extra text
-i="0"
+i="1"
 while [ $i -le 20 ]; do
       echo $i
       case $i in

@@ -2,6 +2,6 @@
 # this script reads the /etc/passwd file and prints the username
 #+ user id and home dir
 cat /etc/passwd |
-while  read -r line; do
+while  read -r; do
       cut -d':' -f1,3,6
 done

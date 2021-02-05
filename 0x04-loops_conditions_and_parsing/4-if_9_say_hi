@@ -2,6 +2,12 @@
 # This script prints "Holberton School" 10 times with while loop
 i="0"
 while [ $i -lt 10 ]; do
-      echo "Holberton School"
+      if [ "$i" -eq "8" ]
+      then
+	  echo "Holberton School"
+	  echo "Hi"
+      else
+	  echo "Holberton School"
+      fi
       i=$((i+1))
 done

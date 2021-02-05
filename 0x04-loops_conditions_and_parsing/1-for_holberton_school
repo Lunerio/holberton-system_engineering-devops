@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script prints 'Holberton School' ten times
+LINE="Holberton School"
+for _ in {0..9}; do
+    echo "$LINE"
+done

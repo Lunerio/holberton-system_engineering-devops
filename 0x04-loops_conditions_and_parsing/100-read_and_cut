@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # this script reads the /etc/passwd file and prints the username
 #+ user id and home dir
-< /etc/passwd tr ' ' _ |
 while  read -r; do
       cut -d':' -f1,3,6
-done
+done < /etc/passwd

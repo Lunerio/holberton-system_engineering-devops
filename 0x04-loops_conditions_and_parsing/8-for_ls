@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # prints the list of files with ls but filtered with cut to delete anything
 #+ before the first dash
-LIST="$(ls)"
-for i in "$LIST"; do
-    echo $(ls $i | cut -d'-' -f2)
+for i in *; do
+    echo "$i" | cut -d'-' -f2
 done

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# tell a story with the passwd file
+while IFS=":" read -r uname pass u_id group_id u_id_inf home_dir com_sh; do
+    echo "The user $uname is part of the $group_id gang, lives in $home_dir and rides $com_sh. $u_id's place is protected by the passcode $pass, more info about the user here: $u_id_inf"
+done < /etc/passwd

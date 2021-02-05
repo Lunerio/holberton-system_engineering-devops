@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# check if file exists, if its empty, and if its a regular file
+FILE="holbertonschool"
+if [ -e $FILE ]
+then
+    echo "holbertonschool file exists"
+    if [ -f $FILE ]
+    then
+	echo "holbertonschool is a regular file"
+	if [ -s $FILE ]
+	then
+	    echo "holbertonschool file is not empty"
+	else
+	    echo "holbertonschool file is empty"
+	fi
+    fi
+else
+    echo "holbertonschool file does not exist"
+fi

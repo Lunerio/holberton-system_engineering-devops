@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This scripts displays all the process with full listing,
 #+ and in user oriented format.
-ps -faexu
+ps -faxu

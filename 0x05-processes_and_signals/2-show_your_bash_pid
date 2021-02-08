@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This scripts displays the process containing bash with full listing,
+#+ and in user oriented format.
+# shellcheck disable=SC2009
+ps -faxu | grep "bash"

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# This script prints "To infinity and beyond"
-while [ true ]; do
+# This script prints "To infinity and beyond" forever, or until you kill the process
+while true; do
       echo "To infinity and beyond"
       sleep 2
 done

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script kill the 7 script, but with pkill
+pkill --signal 15 -f "7-highlander"

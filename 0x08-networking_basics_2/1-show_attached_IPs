@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script prints the IPv4 IP addresses
+# Works on old stuff like Ubuntu 14.04
+# Are you kidding me?
+ifconfig | grep -E "inet addr:" | cut -d':' -f2 | cut -d' ' -f1

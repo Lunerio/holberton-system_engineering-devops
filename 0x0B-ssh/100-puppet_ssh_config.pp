@@ -1,8 +1,9 @@
 # Edit lines in ssh config file
 include stdlib
 file_line { 'Declare identity file':
-  path => '/etc/ssh/ssh_config',
-  line => '    IdentityFile ~/.ssh/holberton',
+  ensure => 'present',
+  path   => '/etc/ssh/ssh_config',
+  line   => '    IdentityFile ~/.ssh/holberton',
 }
 
 file_line { 'Turn off passwd auth':

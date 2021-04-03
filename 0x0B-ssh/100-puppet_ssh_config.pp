@@ -6,8 +6,7 @@ file_line { 'add_key':
 }
 
 file_line { 'no_pass':
-  path => '/etc/ssh/ssh_config',
-  line => 'PasswordAuthentication no',
+  path  => '/etc/ssh/ssh_config',
+  line  => 'PasswordAuthentication no',
   match => '^#.PasswordAuthentication yes',
 }
-

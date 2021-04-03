@@ -1,7 +1,12 @@
-# Edit the ssh config file
-exec { 'ssh_pass':
-  command => "/usr/bin/sed -i 's:#\s*PasswordAuthentication yes:PasswordAuthentication no:' /etc/ssh/ssh_config",
+# Edit lines in ssh config file
+file_line { 'add_key':
+  path => '/etc/ssh/ssh_config',
+  line => 'IdentityFile ~/.ssh/holberton',
 }
-exec { 'ssh_key':
-  command => "/usr/bin/echo 'IdentityFile ~/.ssh/holberton' >> /etc/ssh/ssh_config",
+
+file_line { 'no_pass':
+  path => '/etc/ssh/ssh_config',
+  line => 'PasswordAuthentication no',
+  match => '^#.PasswordAuthentication yes',
 }
+

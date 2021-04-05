@@ -2,6 +2,7 @@
 # Install Nginx on server
 # Set server to listen to port 80
 # On GET request display "Holberton School"
-ssh -i ~/.ssh/holberton ubuntu@35.196.163.39 'sudo apt-get install -y nginx'
-ssh -i ~/.ssh/holberton ubuntu@35.196.163.39 'sudo ufw allow "Nginx HTTP"'
-ssh -i ~/.ssh/holberton ubuntu@35.196.163.39 'sudo echo Holberton\ School > /var/www/html/index.nginx-debian.html'
+sudo apt-get install -y nginx
+sudo ufw allow 'Nginx HTTP'
+sudo chown -R $USER:$USER /var/www/html
+sudo echo "Holberton School" > /var/www/html/index.nginx-debian.html

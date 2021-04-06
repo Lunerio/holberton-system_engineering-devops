@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-# Script that copy an element to a server using scp command
-FILE=$1; IP=$2; USER=$3; KEY=$4
-if [[ $# -ne 4 ]]
-then
-    echo 'Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY'
-else
-    scp -o StrictHostKeyChecking=no -i "$KEY" "$FILE" "$USER"@"$IP":
-fi

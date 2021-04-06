@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Install Nginx on server
+# Set server to listen to port 80
+# On GET request display "Holberton School"
+# Redirect on /redirect_me
+apt-get update -y
+apt-get install -y nginx
+ufw allow 'Nginx HTTP'
+chown -R "$USER":"$USER" /var/www/html
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+sed -i ":server_name.*;:a rewrite ^/redirect_me/ https://www.youtube.com/watch?v=QH2-TGUlwu4/$1 permanent;\n" /etc/nginx/sites-available/default
+service nginx restart

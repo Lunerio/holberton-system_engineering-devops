@@ -5,5 +5,5 @@ apt-get -y install nginx
 chown -R "$USER":"$USER" /var/www/
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
 echo "Ceci n'est pas une page" > /var/www/html/new_404.html
-sed -i '/server_name _/a error_page 404 /new_404.html; \nlocation = /new_404.html \n{\nroot /var/www/html/;\ninternal; \n}' /etc/nginx/sites-available/default
+sudo sed -i '/server_name _/a error_page 404 /new_404.html; \nlocation = /new_404.html \n{\nroot /var/www/html/;\ninternal; \n}' /etc/nginx/sites-available/default
 service nginx restart

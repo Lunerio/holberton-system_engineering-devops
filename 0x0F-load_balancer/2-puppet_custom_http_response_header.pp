@@ -28,8 +28,6 @@ file { '/var/www/html/index.html':
   require => Package['nginx'],
 }
 
-service { 'nginx':
-  ensure  => running,
-  enable  => true,
-  require => Package['nginx'],
+exec { 'restart':
+  command => 'sudo /usr/sbin/service nginx restart',
 }

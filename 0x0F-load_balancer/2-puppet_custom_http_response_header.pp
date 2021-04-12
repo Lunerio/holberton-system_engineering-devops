@@ -28,6 +28,7 @@ file { '/var/www/html/index.html':
   require => Package['nginx'],
 }
 
-exec { 'nginx_restart':                                                                                                                               
-  command => '/usr/sbin/service nginx restart',                                                                                                       
+service { 'nginx':
+  ensure => running,
+  enable => true,
 }

@@ -1,6 +1,6 @@
 # Puppet manifest to create server and add custom header
 exec { 'update':
-  command  => '/usr/bin/apt-get update',
+  command => '/usr/bin/apt-get update',
 }
 
 package { 'nginx':
@@ -28,7 +28,6 @@ file { '/var/www/html/index.html':
   require => Package['nginx'],
 }
 
-service { 'nginx':
-  ensure  => running,
-  require => Package['nginx'],
+exec { 'nginx_restart':                                                                                                                               
+  command => '/usr/sbin/service nginx restart',                                                                                                       
 }

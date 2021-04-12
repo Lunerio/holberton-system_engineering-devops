@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Configure a server with a custom header
+apt-get -y update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+sudo chown -R "$USER":"$USER" /var/www/
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+echo "Ceci n'est pas une page" > /var/www/html/new_404.html
+sudo sed -i '/server_name _/a error_page 404 /new_404.html; \nlocation = /new_404.html \n{\nroot /var/www/html/;\ninternal; \n}' /etc/nginx/sites-available/default
+sudo sed -i '/location \/ }/a add_header X-Served-By $hostname;\n' /etc/nginx/sites-available/default
+sudo service nginx restart

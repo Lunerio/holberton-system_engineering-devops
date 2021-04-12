@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Transfer files to a remote server through ssh
+# Takes four args:
+# PATH_TO_FILE
+# IP
+# USERNAME
+# PATH_TO_SSH_KEY
+ARGS_LEN=$#
+FILE=$1
+IP=$2
+USER=$3
+PATH_KEY=$4
+
+if [ "$ARGS_LEN" -lt "4" ]
+then
+    echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+else
+    scp -i "$PATH_KEY" -o StrictHostKeyChecking=no "$FILE" "$USER"@"$IP":~/
+fi

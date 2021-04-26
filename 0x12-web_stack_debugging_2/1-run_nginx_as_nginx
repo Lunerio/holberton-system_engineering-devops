@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Configures the server to listen incoming traffic from port 8080 and runs nginx as nginx user
+pkill -9 apache2
+sed -i 's/listen 80 default_server/listen 8080 default_server;/' /etc/nginx/sites-available/default
+sudo -u nginx service nginx restart

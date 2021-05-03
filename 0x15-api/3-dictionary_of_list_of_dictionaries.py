@@ -8,7 +8,7 @@ import requests
 if __name__ == '__main__':
     users = requests.get('https://jsonplaceholder.typicode.com/users').json()
 
-    with open('todo_all_employees.json', mode='a') as file:
+    with open('todo_all_employees.json', mode='w') as file:
         all_dict = {}
         for user in users:
             user_dict = {}
@@ -22,5 +22,5 @@ if __name__ == '__main__':
                 new_dict["task"] = task.get('title')
                 new_dict["completed"] = task.get('completed')
                 tasks_list.append(new_dict)
-            all_dict[user.get('id')] = tasks_list    
+            all_dict[user.get('id')] = tasks_list
         json.dump(all_dict, file)

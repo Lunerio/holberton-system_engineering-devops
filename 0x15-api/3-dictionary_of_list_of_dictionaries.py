@@ -22,4 +22,4 @@ if __name__ == '__main__':
                 new_dict["completed"] = task.get('completed')
                 tasks_list.append(new_dict)
             user_dict[user.get('id')] = tasks_list
-            json.dump(user_dict, file)
+        json.dump(user_dict, file)

@@ -9,6 +9,7 @@ from sys import argv
 if __name__ == '__main__':
     user_name = requests.get('https://jsonplaceholder.typicode.com/users/{}/'.
                              format(int(argv[1]))).json().get('username')
+
     user_tasks = requests.\
         get('https://jsonplaceholder.typicode.com/users/{}/todos'.
             format(int(argv[1]))).json()

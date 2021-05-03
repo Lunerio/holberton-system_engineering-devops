@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """ This module does a GET request to an API
 """
-
-from sys import argv
 import requests
+from sys import argv
 
 
 if __name__ == '__main__':
@@ -25,7 +24,7 @@ if __name__ == '__main__':
 
     true_elements = []
     for completed in full_list:
-        if completed.get('completed') == True:
+        if completed.get('completed'):
             true_elements.append(completed)
 
     print('Employee {} is done with tasks({}/{}):'.

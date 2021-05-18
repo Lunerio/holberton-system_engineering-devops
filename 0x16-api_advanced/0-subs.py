@@ -9,7 +9,7 @@ def number_of_subscribers(subreddit):
     of a given subreddit, or 0 if the subreddit
     doesnt exist
     """
-    request_stat = requests.get('https://reddit.com/r/programming')
+    request_stat = requests.get('https://reddit.com/r/' + subreddit)
     if request_stat.status_code == 404:
         return 0
     else:
